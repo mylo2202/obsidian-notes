@@ -1,9 +1,9 @@
 /* 1. Force Monospace ONLY in Source Mode & Live Preview */
 .markdown-source-view.mod-cm6 .cm-scroller {
-    font-family: 'Cascadia Code', 'Consolas', 'JetBrains Mono', monospace !important;
+    font-family: 'Cascadia Code', 'Consolas', 'Ubuntu Mono', 'JetBrains Mono', monospace !important;
 }
 
 /* 2. Force a clean Prose/System font ONLY in Reading Mode */
 .markdown-reading-view .markdown-preview-view {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", Roboto, Helvetica, Arial, sans-serif !important;
 }

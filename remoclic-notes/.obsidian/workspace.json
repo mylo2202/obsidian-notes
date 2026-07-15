@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "walkthrough_ingestion.md",
-                "mode": "source",
+                "file": "remoclic-db-info.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "walkthrough_ingestion"
+              "title": "remoclic-db-info"
             }
           }
         ]
@@ -182,11 +182,11 @@
   },
   "active": "b3c7ded8d3df2c8e",
   "lastOpenFiles": [
+    "walkthrough_ingestion.md",
     "deployment_notes.md",
     "cloud_run_investigation_fe.md",
     "cloud_run_investigation_be.md",
     "implementation_plan_postgres.md",
-    "walkthrough_ingestion.md",
     "remoclic-db-info.md"
   ]
 }
