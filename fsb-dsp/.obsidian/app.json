@@ -1,0 +1,14 @@
+{
+  "promptDelete": false,
+  "livePreview": false,
+  "showLineNumber": true,
+  "strictLineBreaks": true,
+  "readableLineLength": true,
+  "showInlineTitle": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": true,
+    "margin": "2",
+    "downscalePercent": 100
+  }
+}

@@ -1,41 +1,98 @@
 {
   "main": {
-    "id": "36c6e414cae80d26",
+    "id": "79aaa850fc8e1c46",
     "type": "split",
     "children": [
       {
-        "id": "17595820a1faf7af",
+        "id": "7a354b56151733c5",
         "type": "tabs",
         "children": [
           {
-            "id": "b3c7ded8d3df2c8e",
+            "id": "8c345771e24273c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "remoclic-db-info.md",
+                "file": "20260518-notes.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "20260518-notes"
+            }
+          },
+          {
+            "id": "d27459cf43aab4fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20260525-notes.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "20260525-notes"
+            }
+          },
+          {
+            "id": "13c3106801cf88b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20260525-presentation-script.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "remoclic-db-info"
+              "title": "20260525-presentation-script"
+            }
+          },
+          {
+            "id": "686a44a3f2fcdcc6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "final-presentation-xai-rq3.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "final-presentation-xai-rq3"
+            }
+          },
+          {
+            "id": "313a10a09fcfd667",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20260522-notes.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "20260522-notes"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "dde0e9afba54ffae",
+    "id": "f220e5eca0c15b7f",
     "type": "split",
     "children": [
       {
-        "id": "5957a38d9c204b8c",
+        "id": "cd949b28a852388d",
         "type": "tabs",
         "children": [
           {
-            "id": "dac2d350d1fd1a88",
+            "id": "79280e79bd5bf731",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +105,7 @@
             }
           },
           {
-            "id": "c35313c246545ac3",
+            "id": "3b5b0663a4112500",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +122,7 @@
             }
           },
           {
-            "id": "2db85ae1625fbd0b",
+            "id": "e9957ad0f2cbf231",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,19 +138,20 @@
     "width": 300
   },
   "right": {
-    "id": "901458987163915a",
+    "id": "1ceefac3c4c72c5d",
     "type": "split",
     "children": [
       {
-        "id": "d5e8c13ede98a294",
+        "id": "a889183fec667953",
         "type": "tabs",
         "children": [
           {
-            "id": "bc45ebd6b8729157",
+            "id": "550fa5eed29b2ef5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "final-presentation-xai-rq3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,24 +161,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for final-presentation-xai-rq3"
             }
           },
           {
-            "id": "15a8d9a0331f35c2",
+            "id": "b19ef95e1d134862",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "final-presentation-xai-rq3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from final-presentation-xai-rq3"
             }
           },
           {
-            "id": "b55198093348d96b",
+            "id": "22a093043d8ed1af",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -135,7 +194,7 @@
             }
           },
           {
-            "id": "247f3eed9614c610",
+            "id": "3d1c3033399620c7",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -149,17 +208,18 @@
             }
           },
           {
-            "id": "a411dc7218952ef5",
+            "id": "8632f7dc69f664c3",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "final-presentation-xai-rq3.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of final-presentation-xai-rq3"
             }
           }
         ]
@@ -180,13 +240,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "b3c7ded8d3df2c8e",
+  "active": "686a44a3f2fcdcc6",
   "lastOpenFiles": [
-    "walkthrough_ingestion.md",
-    "deployment_notes.md",
-    "cloud_run_investigation_fe.md",
-    "cloud_run_investigation_be.md",
-    "implementation_plan_postgres.md",
-    "remoclic-db-info.md"
+    "20260525-presentation-script.md",
+    "final-presentation-xai-rq3.md",
+    "20260525-notes.md",
+    "20260518-notes.md",
+    "20260522-notes.md"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "cssTheme": "Tokyo Night",
+  "monospaceFontFamily": "Ubuntu Mono",
+  "textFontFamily": "Ubuntu",
+  "interfaceFontFamily": "Ubuntu",
+  "baseFontSizeAction": true,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "separate-fonts",
+    "custom-fonts"
+  ],
+  "baseFontSize": 16
+}

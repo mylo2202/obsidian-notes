@@ -1,0 +1,13 @@
+{
+  "cssTheme": "Tokyo Night",
+  "monospaceFontFamily": "",
+  "textFontFamily": "",
+  "interfaceFontFamily": "",
+  "baseFontSizeAction": true,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "separate-fonts",
+    "custom-fonts"
+  ],
+  "baseFontSize": 16
+}
