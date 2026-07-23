@@ -8,62 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4976f1198ab35b4f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Study activities/Group formation.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Group formation"
-            }
-          },
-          {
-            "id": "8189050945d14f15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Study activities/Agile Sprint 0 initiation & planning (Unmarked).md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Agile Sprint 0 initiation & planning (Unmarked)"
-            }
-          },
-          {
-            "id": "de6363db24a55f98",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Study activities/Agile Sprint 1 (Unmarked).md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Agile Sprint 1 (Unmarked)"
-            }
-          },
-          {
-            "id": "bd886ae8d3dcba2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Study activities/Agile Sprint 2 (Unmarked).md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Agile Sprint 2 (Unmarked)"
-            }
-          },
-          {
             "id": "3107e1a64cf380f5",
             "type": "leaf",
             "state": {
@@ -77,8 +21,7 @@
               "title": "Case study Smart Healthcare Institute (SHI)"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"

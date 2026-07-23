@@ -1,8 +1,8 @@
 {
   "cssTheme": "Tokyo Night",
-  "monospaceFontFamily": "",
-  "textFontFamily": "",
-  "interfaceFontFamily": "",
+  "monospaceFontFamily": "Cascadia Code,Ubuntu Mono",
+  "textFontFamily": "Segoe UI,Ubuntu",
+  "interfaceFontFamily": "Segoe UI,Ubuntu",
   "baseFontSizeAction": true,
   "nativeMenus": false,
   "enabledCssSnippets": [

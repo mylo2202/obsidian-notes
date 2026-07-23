@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "final-presentation-xai-rq3.md",
-                "mode": "preview",
+                "file": "midterm-cache-llm-keywords.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "final-presentation-xai-rq3"
+              "title": "midterm-cache-llm-keywords"
             }
           },
           {
@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -240,11 +240,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "686a44a3f2fcdcc6",
+  "active": "313a10a09fcfd667",
   "lastOpenFiles": [
+    "midterm-cache-llm-keywords.md",
     "20260525-presentation-script.md",
-    "final-presentation-xai-rq3.md",
     "20260525-notes.md",
+    "midterm-cache-llm-literature-review.md",
+    "midterm-cache-llm-rq.md",
+    "final-xai-rq3.md",
     "20260518-notes.md",
     "20260522-notes.md"
   ]
