@@ -6,6 +6,8 @@
 
 #### 1.1. Continuous-Time Sinusoidal Signals
 
+A simple harmonic oscillation is mathematically described by a continuous-time sinusoidal signal. A continuous-time sinusoid is completely characterized by three parameters: amplitude ($A$), frequency ($\Omega$ or $F$), and phase ($\theta$).
+
 **General Expression (Radians):**
 
 $$  
@@ -60,10 +62,10 @@ $$
 Sinusoidal signals are closely related to complex exponential signals through **Euler's identity**:
 
 $$  
-e^{\pm j\phi}
-
+e^{j\phi}
+=
 \cos\phi  
-\pm  
++  
 j\sin\phi  
 $$
 
@@ -86,6 +88,8 @@ $$
 $$
 
 #### 1.2. Discrete-Time Sinusoidal Signals
+
+A discrete-time sinusoidal signal is a sequence of numbers derived from a function of an integer variable $n$.
 
 **General Expression (Radians):**
 
@@ -263,7 +267,7 @@ $$
 u[n] = \sum_{k=-\infty}^{n} \delta[k] = \sum_{k=0}^{\infty} \delta[n-k]
 $$
 
-#### 2,3. Unit Ramp Signal
+#### 2.3. Unit Ramp Signal
 A signal that grows linearly with sample index $n$ for non-negative time:
 
 $$  
@@ -449,6 +453,7 @@ $$
 - A discrete-time system operates on an input sequence $x[n]$ to produce an output sequence $y[n]$, represented as $y[n] = \mathcal{T}\{x[n]\}$.
 - Systems are represented by difference equations: Linear constant-coefficient difference equations (LCCDE) relate the current output to past outputs and current/past inputs:
   $$\sum_{k=0}^{N} a_k y[n-k] = \sum_{m=0}^{M} b_m x[n-m]$$
+
 #### 1.2. Block Diagram Representation of Discrete-Time Systems
 - Constructed using three basic functional building blocks:
   - **Adder:** Adds two signals, $y[n] = x_1[n] + x_2[n]$.

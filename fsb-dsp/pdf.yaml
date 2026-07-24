@@ -1,0 +1,7 @@
+pdf-engine: xelatex
+
+variables:
+  # mainfont: TeX Gyre Pagella
+  # mathfont: TeX Gyre Pagella Math
+  fontsize: 12pt
+  geometry: margin=2cm

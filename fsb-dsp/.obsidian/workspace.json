@@ -14,12 +14,34 @@
               "type": "markdown",
               "state": {
                 "file": "session2.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "session2"
+            },
+            "group": "bacb69f59b0a70ca"
+          }
+        ]
+      },
+      {
+        "id": "13cb2dea9969b582",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "acfaf4c33cd4571f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "session2.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "session2"
-            }
+            },
+            "group": "bacb69f59b0a70ca"
           }
         ]
       }
@@ -78,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5cd9def710f5d4da",
@@ -185,6 +208,12 @@
   },
   "active": "9639b379722b30e8",
   "lastOpenFiles": [
+    "session2.pdf",
+    "session2-obsidian.pdf",
+    "session2.tdf",
+    "session2.synctex(busy)",
+    "session2.log",
+    "session2.tex",
     "session1.md",
     "session2.md",
     "signal_visualization.png",
