@@ -21,11 +21,11 @@ variables:
 To convert a Markdown to a TeX document:
 
 ```bash
-pandoc session2.md --defaults=pdf.yaml -o session2.tex
+pandoc note.md --defaults=pdf.yaml -o note.tex
 ```
 
 To convert a Markdown to a PDF document:
 
 ```bash
-pandoc session2.md --defaults=pdf.yaml -o session2.pdf
+pandoc note.md --defaults=pdf.yaml -o note.pdf
 ```

@@ -8,40 +8,40 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fc39bf3e611bf025",
+            "id": "b210dd96fae2db0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "session3/note.md",
+                "file": "session4/note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "note"
             },
-            "group": "1d1806f033e8d2d8"
+            "group": "558ae5765390a9a6"
           }
         ]
       },
       {
-        "id": "65bd89a485e29e11",
+        "id": "4cc0727934229135",
         "type": "tabs",
         "children": [
           {
-            "id": "5a7cb6bd1b7a7575",
+            "id": "f7c8c3eac6e81fb8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "session3/note.md",
+                "file": "session4/note.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "note"
             },
-            "group": "1d1806f033e8d2d8"
+            "group": "558ae5765390a9a6"
           }
         ]
       }
@@ -100,8 +100,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5cd9def710f5d4da",
@@ -206,21 +205,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "fc39bf3e611bf025",
+  "active": "f7c8c3eac6e81fb8",
   "lastOpenFiles": [
+    "session3/note.md",
+    "session4/note.md",
+    "session2/note.md",
+    "session3/note.pdf",
+    "session3/note.tex",
+    "session4",
     "session3/session3-TeX-Gyre-Pagella.pdf",
     "session3/session3.pdf",
     "session3/note-TeX-Gyre-Pagella.pdf",
     "session3/note-TeX-Gyre-Pagella.tex",
-    "session3/note.pdf",
-    "session3/note.tex",
     "session3/note.log",
     "session3/note.synctex(busy)",
     "session3/note.synctex.gz",
-    "session3/note.aux",
-    "session3/note-obsidian.pdf",
-    "session2/note.md",
-    "session3/note.md",
     "session3.md",
     "note.md",
     "session2/signal_visualization.png",
