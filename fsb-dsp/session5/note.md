@@ -17,6 +17,8 @@ $$
 
 which has one zero at $z_1 = 1$ and two poles at $p_1 = 0.9e^{j π/4}, p_2 = 0.9e^{-j π/4}$.
 
+Reference: https://matplotlib.org/stable/gallery/mplot3d/subplot3d.html
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
