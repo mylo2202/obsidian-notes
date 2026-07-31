@@ -246,8 +246,8 @@
 
 - **Response of Systems with Rational System Functions**
     
-    - Linear time-invariant (LTI) systems described by constant-coefficient difference equations have **rational system functions** of the form $H(z) = B(z)/A(z)$.
-    - For a relaxed system, the output $z$-transform is the product of the system function and the input $z$-transform: $Y(z) = H(z)X(z)$.
+    - Linear time-invariant (LTI) systems described by constant-coefficient difference equations have **rational system functions** of the form $$H(z) = \frac{B(z)}{A(z)}$$
+    - For a relaxed system, the output $z$-transform is the product of the system function and the input $z$-transform: $$Y(z) = H(z)X(z)$$
     - The total response $y(n)$ can be subdivided into two parts:
         - **Natural Response**: Determined by the poles ${p_k}$ of the system.
         - **Forced Response**: Determined by the poles ${q_k}$ of the input signal.
@@ -274,10 +274,156 @@
     - Systems with distinct poles on the unit circle (like digital oscillators) are often called **marginally stable**.
 - **Stability of Second-Order Systems**
     
-    - A causal two-pole system with $H(z) = \frac{b_0}{1 + a_1 z^{-1} + a_2 z^{-2}}$ is stable if its poles lie inside the unit circle.
+    - A causal two-pole system with $$H(z) = \frac{b_0}{1 + a_1 z^{-1} + a_2 z^{-2}}$$ is stable if its poles lie inside the unit circle.
     - This condition is satisfied if the coefficients $(a_1, a_2)$ fall within the **stability triangle** defined by:
         - $|a_2| < 1$
         - $|a_1| < 1 + a_2$
     - The unit sample response $h(n)$ behavior changes based on where the coefficients lie in this triangle: real and distinct poles, real and equal poles, or complex-conjugate poles.
 
 ---
+
+## Digital Signal Processing in Python
+
+### ECG Signal Analysis
+
+#### Loading the ECG Data
+
+```python
+from scipy.datasets import electrocardiogram
+ecg = electrocardiogram()
+```
+
+Loads a real-world ECG (electrocardiogram) sample dataset from SciPy. It's a 1D NumPy array of heart voltage readings.
+
+#### Inspecting the Data
+
+```python
+# confirms it's a NumPy array
+type(ecg)
+# shape, mean, and standard deviation
+ecg.shape, ecg.mean(), ecg.std()
+# total number of samples
+ecg.size
+```
+
+#### Plotting ECG Segments
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+fs = 360
+time = np.arange(ecg.size) / fs
+plt.plot(time, ecg)
+plt.xlabel("time in s")
+plt.ylabel("ECG in mV")
+plt.xlim(9, 10.2)
+plt.ylim(-1, 1.5)
+plt.show()
+```
+
+![](443cf413-07a6-4db9-a47c-94fa47486bf5.png)
+
+The signal was recorded at **fs = 360 Hz**, so `time = np.arange(ecg.size) / fs` converts sample indices to seconds.
+
+### Audio Recording & Playback
+
+#### Recording Audio
+```python
+import sounddevice
+from scipy.io.wavfile import write
+fs= 44100
+second = int(input("enter time duration in second:"))
+print("recording...")
+record_voice= sounddevice.rec(int(second * fs), samplerate=fs, channels=1)
+sounddevice.wait()
+write("output.wav", fs, record_voice)
+print("recording complete")
+```
+Records audio from the microphone for a user-specified duration at 44100 Hz and saves it as `output.wav`.
+
+#### Listing Audio Devices
+```python
+sounddevice.query_devices()
+```
+Lists all available audio input/output devices on the system.
+
+### Playback
+Two ways to play back the saved file:
+1. **`sounddevice` + `soundfile`** — reads the WAV and plays it via the system audio device
+```python
+import sounddevice
+import soundfile as sf
+
+data, fs = sf.read("output.wav", dtype="float32")
+sounddevice.play(data, fs)
+sounddevice.wait()
+```
+2. **`IPython.display.Audio`** — embeds an interactive audio player directly in the notebook
+```python
+from IPython.display import Audio
+Audio("output.wav")
+```
+
+#### Visualizing the Audio Waveform
+```python
+fs = 44100
+time = np.arange(data.size) / fs
+plt.plot(time, data)
+plt.xlabel("time in s")
+plt.ylabel("amplitude")
+plt.xlim(0.5, 0.6)
+plt.ylim(-1.5, 1.5)
+plt.show()
+```
+Plots the amplitude of the audio signal over time, zoomed into a 100ms window (0.5–0.6s).
+
+### Complex Numbers (Review/Intro)
+
+#### Complex Square Root
+```python
+cmath.sqrt(-1)  # → 1j
+```
+
+#### Defining & Inspecting a Complex Number
+```python
+z = 2 + 3j
+np.real(z)   # 2.0
+np.imag(z)   # 3.0
+np.abs(z)    # magnitude
+np.angle(z)  # phase angle in radians
+```
+
+#### Visualizations
+- **Cartesian plot** — plots `z` as a point on the real/imaginary plane with axes drawn
+
+```python
+# plot the complex number
+plt.plot(np.real(z),np.imag(z), 'ks')
+
+# make plot look nicer
+plt.xlim([-5,5])
+plt.ylim([-5,5])
+plt.plot([-5,5], [0,0],'k')
+plt.plot([0,0], [-5,5],'k')
+plt.xlabel('real axis')
+plt.ylabel('imag axis')
+plt.show()
+```
+
+- **Polar plot** — uses `plt.polar()` to draw a vector from the origin with its magnitude and angle
+
+```python
+mag = np.abs(z)
+ang = np.angle(z)
+
+plt.polar([0, ang], [0, mag], 'r')
+plt.show()
+```
+
+#### Polynomial Roots
+```python
+p = [1, 0, 0, 1]
+np.roots(p)
+```
+Finds solutions to $x^3 + 1 = 0$.
