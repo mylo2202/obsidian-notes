@@ -350,7 +350,9 @@ Lists all available audio input/output devices on the system.
 
 ### Playback
 Two ways to play back the saved file:
+
 1. **`sounddevice` + `soundfile`** — reads the WAV and plays it via the system audio device
+
 ```python
 import sounddevice
 import soundfile as sf
@@ -359,13 +361,16 @@ data, fs = sf.read("output.wav", dtype="float32")
 sounddevice.play(data, fs)
 sounddevice.wait()
 ```
+
 2. **`IPython.display.Audio`** — embeds an interactive audio player directly in the notebook
+
 ```python
 from IPython.display import Audio
 Audio("output.wav")
 ```
 
 #### Visualizing the Audio Waveform
+
 ```python
 fs = 44100
 time = np.arange(data.size) / fs
@@ -376,16 +381,19 @@ plt.xlim(0.5, 0.6)
 plt.ylim(-1.5, 1.5)
 plt.show()
 ```
+
 Plots the amplitude of the audio signal over time, zoomed into a 100ms window (0.5–0.6s).
 
-### Complex Numbers (Review/Intro)
+### Complex Numbers
 
 #### Complex Square Root
+
 ```python
 cmath.sqrt(-1)  # → 1j
 ```
 
 #### Defining & Inspecting a Complex Number
+
 ```python
 z = 2 + 3j
 np.real(z)   # 2.0
@@ -395,6 +403,7 @@ np.angle(z)  # phase angle in radians
 ```
 
 #### Visualizations
+
 - **Cartesian plot** — plots `z` as a point on the real/imaginary plane with axes drawn
 
 ```python
@@ -422,8 +431,10 @@ plt.show()
 ```
 
 #### Polynomial Roots
+
 ```python
 p = [1, 0, 0, 1]
 np.roots(p)
 ```
+
 Finds solutions to $x^3 + 1 = 0$.
