@@ -13,35 +13,35 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "session4/note.md",
+                "file": "session5/note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "note"
             },
-            "group": "558ae5765390a9a6"
+            "group": "73cc358fd29104c9"
           }
         ]
       },
       {
-        "id": "4cc0727934229135",
+        "id": "bc11dd289b95d977",
         "type": "tabs",
         "children": [
           {
-            "id": "f7c8c3eac6e81fb8",
+            "id": "1d77344b4bf67943",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "session4/note.md",
+                "file": "session5/note.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "note"
             },
-            "group": "558ae5765390a9a6"
+            "group": "73cc358fd29104c9"
           }
         ]
       }
@@ -63,7 +63,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -205,21 +207,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "f7c8c3eac6e81fb8",
+  "active": "7f56c7f80ae7b4c1",
   "lastOpenFiles": [
-    "session3/note.md",
+    "session5/z-transform-graph.png",
     "session4/note.md",
+    "session4/session4-ver2.pdf",
+    "session4/note (Copy).pdf",
+    "session4/note.pdf",
+    "session4/note.tex",
+    "session4/complex-polar-plot.png",
+    "session4/ecg-segment-plot.png",
+    "session4/complex-cartesian-plot.png",
+    "session4/audio-waveform.png",
+    "session5/note.md",
+    "Pasted image 20260731224913.png",
+    "session3/note.md",
+    "session5",
     "session2/note.md",
     "session3/note.pdf",
     "session3/note.tex",
     "session4",
     "session3/session3-TeX-Gyre-Pagella.pdf",
     "session3/session3.pdf",
-    "session3/note-TeX-Gyre-Pagella.pdf",
-    "session3/note-TeX-Gyre-Pagella.tex",
-    "session3/note.log",
-    "session3/note.synctex(busy)",
-    "session3/note.synctex.gz",
     "session3.md",
     "note.md",
     "session2/signal_visualization.png",

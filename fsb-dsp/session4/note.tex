@@ -1,12 +1,10 @@
-\hypertarget{digital-signal-processing-dsp---session-4}{%
 \section{Digital Signal Processing (DSP) - Session
-4}\label{digital-signal-processing-dsp---session-4}}
+4}\label{digital-signal-processing-dsp---session-4}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{the-z-transform-and-its-application-to-the-analysis-of-lti-systems}{%
 \subsection{The Z-Transform and Its Application to the Analysis of LTI
-Systems}\label{the-z-transform-and-its-application-to-the-analysis-of-lti-systems}}
+Systems}\label{the-z-transform-and-its-application-to-the-analysis-of-lti-systems}
 
 \begin{quote}
 \textbf{\emph{Example 1.2}}
@@ -120,7 +118,7 @@ x(n) = -\alpha^n u(-n-1) =
 \item
   \textbf{Form the Closed-Form Expression}: Substitute
   \(A = \alpha^{-1} z\) into the formula and simplify:
-  \[X(z) = -\frac{\alpha^{-1} z}{1 - \alpha^{-1} z} = \mathbf{\frac{1}{1 - \alpha z^{-1}}}\]
+  \[X(z) = -\frac{\alpha^{-1} z}{1 - \alpha^{-1} z} = {\frac{1}{1 - \alpha z^{-1}}}\]
 \item
   \textbf{Determine the Region of Convergence (ROC)}: The series
   converges only if \(|\alpha^{-1} z| < 1\). Solving for \(z\) yields
@@ -152,15 +150,7 @@ Determine the \textbf{z-transform} of the two-sided signal:
   \[X(z) = \sum_{n=0}^{\infty} \alpha^n z^{-n} + \sum_{n=-\infty}^{-1} b^n z^{-n}\]
 \item
   \textbf{Rewrite as Geometric Series}:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Part 1}: \(\sum_{n=0}^{\infty} (\alpha z^{-1})^n\).
-  \item
-    \textbf{Part 2}: Let \(l = -n\). The sum becomes
-    \(\sum_{l=1}^{\infty} (b^{-1} z)^l\).
-  \end{itemize}
+  \[X(z) = \sum_{n=0}^{\infty} (\alpha z^{-1})^n + \sum_{l=1}^{\infty} (b^{-1} z)^l\]
 \item
   \textbf{Determine Convergence Conditions}:
 
@@ -194,8 +184,7 @@ Determine the \textbf{z-transform} of the two-sided signal:
 \end{enumerate}
 \end{quote}
 
-\hypertarget{the-inverse-z-transform}{%
-\subsubsection{The Inverse z-Transform}\label{the-inverse-z-transform}}
+\subsubsection{The Inverse z-Transform}\label{the-inverse-z-transform}
 
 \begin{itemize}
 \tightlist
@@ -231,9 +220,8 @@ Determine the \textbf{z-transform} of the two-sided signal:
   \end{enumerate}
 \end{itemize}
 
-\hypertarget{properties-of-the-z-transform}{%
 \subsubsection{Properties of the
-z-Transform}\label{properties-of-the-z-transform}}
+z-Transform}\label{properties-of-the-z-transform}
 
 \begin{itemize}
 \tightlist
@@ -295,25 +283,37 @@ Determine the \textbf{z-transform} and the \textbf{Region of Convergence
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Define Signal Components}: Let \(x_1(n) = 2^n u(n)\) and
-  \(x_2(n) = 3^n u(n)\).
+  \textbf{Define Signal Components}: Let
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(x_1(n) = 2^n u(n)\)
+\item
+  \(x_2(n) = 3^n u(n)\)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
 \item
   \textbf{Apply Linearity}: The signal is a linear combination:
-  \(x(n) = 3x_1(n) - 4x_2(n)\). The property states:
-  \(X(z) = 3X_1(z) - 4X_2(z)\).
+  \[x(n) = 3x_1(n) - 4x_2(n)\] The property states:
+  \[X(z) = 3X_1(z) - 4X_2(z)\]
 \item
   \textbf{Find Individual Transforms and ROCs}:
 
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{For \(x_1(n)\)}: Using the pair
-    \(\alpha^n u(n) \leftrightarrow \frac{1}{1-\alpha z^{-1}}\), we get
-    \(X_1(z) = \frac{1}{1-2z^{-1}}\) with \textbf{ROC: \(|z| > 2\)}.
-  \item
-    \textbf{For \(x_2(n)\)}: Similarly, \(X_2(z) = \frac{1}{1-3z^{-1}}\)
-    with \textbf{ROC: \(|z| > 3\)}.
-  \end{itemize}
+  Recall the pair:
+  \[\alpha^n u(n) \leftrightarrow \frac{1}{1-\alpha z^{-1}}\]
+
+  For \(x_1(n)\) we get:
+  \[x_1(n) = 2^n u(n) \leftrightarrow  X_1(z) = \frac{1}{1-2z^{-1}}\]
+  with \textbf{ROC: \(|z| > 2\)}.
+
+  For \(x_2(n)\) we get:
+  \[x_2(n) = 3^n u(n) \leftrightarrow X_2(z) = \frac{1}{1-3z^{-1}}\]
+  with \textbf{ROC: \(|z| > 3\)}.
 \item
   \textbf{Form the Combined Expression}: Substitute these into the
   linear equation:
@@ -376,8 +376,7 @@ sum is the definition of \(X_1(z)\). Thus:
 \textbf{\[X(z) = X_1(z)X_2(z)\]}
 \end{quote}
 
-\hypertarget{poles-and-zeros}{%
-\subsubsection{Poles and Zeros}\label{poles-and-zeros}}
+\subsubsection{Poles and Zeros}\label{poles-and-zeros}
 
 \begin{itemize}
 \item
@@ -567,9 +566,8 @@ where \(a > 0\).
 \end{enumerate}
 \end{quote}
 
-\hypertarget{analysis-of-linear-time-invariant-systems-in-the-z-domain}{%
 \subsubsection{Analysis of Linear Time-Invariant Systems in the
-z-Domain}\label{analysis-of-linear-time-invariant-systems-in-the-z-domain}}
+z-Domain}\label{analysis-of-linear-time-invariant-systems-in-the-z-domain}
 
 \begin{itemize}
 \item
@@ -705,15 +703,12 @@ z-Domain}\label{analysis-of-linear-time-invariant-systems-in-the-z-domain}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{digital-signal-processing-in-python}{%
 \subsection{Digital Signal Processing in
-Python}\label{digital-signal-processing-in-python}}
+Python}\label{digital-signal-processing-in-python}
 
-\hypertarget{ecg-signal-analysis}{%
-\subsubsection{ECG Signal Analysis}\label{ecg-signal-analysis}}
+\subsubsection{ECG Signal Analysis}\label{ecg-signal-analysis}
 
-\hypertarget{loading-the-ecg-data}{%
-\paragraph{Loading the ECG Data}\label{loading-the-ecg-data}}
+\paragraph{Loading the ECG Data}\label{loading-the-ecg-data}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -725,8 +720,7 @@ Python}\label{digital-signal-processing-in-python}}
 Loads a real-world ECG (electrocardiogram) sample dataset from SciPy.
 It's a 1D NumPy array of heart voltage readings.
 
-\hypertarget{inspecting-the-data}{%
-\paragraph{Inspecting the Data}\label{inspecting-the-data}}
+\paragraph{Inspecting the Data}\label{inspecting-the-data}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -739,8 +733,7 @@ It's a 1D NumPy array of heart voltage readings.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{plotting-ecg-segments}{%
-\paragraph{Plotting ECG Segments}\label{plotting-ecg-segments}}
+\paragraph{Plotting ECG Segments}\label{plotting-ecg-segments}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -758,18 +751,16 @@ It's a 1D NumPy array of heart voltage readings.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{443cf413-07a6-4db9-a47c-94fa47486bf5.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ecg-segment-plot.png}}
 
 The signal was recorded at \textbf{fs = 360 Hz}, so
 \texttt{time\ =\ np.arange(ecg.size)\ /\ fs} converts sample indices to
 seconds.
 
-\hypertarget{audio-recording-playback}{%
 \subsubsection{Audio Recording \&
-Playback}\label{audio-recording-playback}}
+Playback}\label{audio-recording-playback}
 
-\hypertarget{recording-audio}{%
-\paragraph{Recording Audio}\label{recording-audio}}
+\paragraph{Recording Audio}\label{recording-audio}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -788,8 +779,7 @@ Playback}\label{audio-recording-playback}}
 Records audio from the microphone for a user-specified duration at 44100
 Hz and saves it as \texttt{output.wav}.
 
-\hypertarget{listing-audio-devices}{%
-\paragraph{Listing Audio Devices}\label{listing-audio-devices}}
+\paragraph{Listing Audio Devices}\label{listing-audio-devices}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -799,8 +789,7 @@ Hz and saves it as \texttt{output.wav}.
 
 Lists all available audio input/output devices on the system.
 
-\hypertarget{playback}{%
-\subsubsection{Playback}\label{playback}}
+\subsubsection{Playback}\label{playback}
 
 Two ways to play back the saved file:
 
@@ -839,9 +828,8 @@ Two ways to play back the saved file:
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{visualizing-the-audio-waveform}{%
 \paragraph{Visualizing the Audio
-Waveform}\label{visualizing-the-audio-waveform}}
+Waveform}\label{visualizing-the-audio-waveform}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -856,38 +844,35 @@ Waveform}\label{visualizing-the-audio-waveform}}
 \end{Highlighting}
 \end{Shaded}
 
+\pandocbounded{\includegraphics[keepaspectratio]{audio-waveform.png}}
+
 Plots the amplitude of the audio signal over time, zoomed into a 100ms
 window (0.5--0.6s).
 
-\hypertarget{complex-numbers-reviewintro}{%
-\subsubsection{Complex Numbers
-(Review/Intro)}\label{complex-numbers-reviewintro}}
+\subsubsection{Complex Numbers}\label{complex-numbers}
 
-\hypertarget{complex-square-root}{%
-\paragraph{Complex Square Root}\label{complex-square-root}}
+\paragraph{Complex Square Root}\label{complex-square-root}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{cmath.sqrt(}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)  }\CommentTok{\# → 1j}
+\NormalTok{cmath.sqrt(}\OperatorTok{{-}}\DecValTok{1}\NormalTok{)  }\CommentTok{\# 1j}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{defining-inspecting-a-complex-number}{%
 \paragraph{Defining \& Inspecting a Complex
-Number}\label{defining-inspecting-a-complex-number}}
+Number}\label{defining-inspecting-a-complex-number}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{z }\OperatorTok{=} \DecValTok{2} \OperatorTok{+} \OtherTok{3j}
 \NormalTok{np.real(z)   }\CommentTok{\# 2.0}
 \NormalTok{np.imag(z)   }\CommentTok{\# 3.0}
-\NormalTok{np.}\BuiltInTok{abs}\NormalTok{(z)    }\CommentTok{\# magnitude}
-\NormalTok{np.angle(z)  }\CommentTok{\# phase angle in radians}
+\NormalTok{np.}\BuiltInTok{abs}\NormalTok{(z)    }\CommentTok{\# magnitude: 3.6055512754639896}
+\NormalTok{np.angle(z)  }\CommentTok{\# phase angle (rad): 0.982793723247329}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{visualizations}{%
-\paragraph{Visualizations}\label{visualizations}}
+\paragraph{Visualizations}\label{visualizations}
 
 \begin{itemize}
 \tightlist
@@ -912,6 +897,8 @@ Number}\label{defining-inspecting-a-complex-number}}
 \end{Highlighting}
 \end{Shaded}
 
+\pandocbounded{\includegraphics[keepaspectratio]{complex-cartesian-plot.png}}
+
 \begin{itemize}
 \tightlist
 \item
@@ -929,8 +916,9 @@ Number}\label{defining-inspecting-a-complex-number}}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{polynomial-roots}{%
-\paragraph{Polynomial Roots}\label{polynomial-roots}}
+\pandocbounded{\includegraphics[keepaspectratio]{complex-polar-plot.png}}
+
+\paragraph{Polynomial Roots}\label{polynomial-roots}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -938,5 +926,9 @@ Number}\label{defining-inspecting-a-complex-number}}
 \NormalTok{np.roots(p)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+array([-1. +0.j       ,  0.5+0.8660254j,  0.5-0.8660254j])
+\end{verbatim}
 
 Finds solutions to \(x^3 + 1 = 0\).

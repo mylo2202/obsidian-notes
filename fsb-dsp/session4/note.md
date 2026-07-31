@@ -61,7 +61,7 @@
 > 2. **Substitute the Signal**: Adjust the limits for the anticausal signal: $$X(z) = \sum_{n=-\infty}^{-1} (-\alpha^n) z^{-n}$$
 > 3. **Change Variable for Summation**: Let $l = -n$. The sum becomes: $$X(z) = -\sum_{l=1}^{\infty} (\alpha^{-1} z)^l$$
 > 4. **Apply Geometric Series Summation**: Use the formula $A + A^2 + A^3 + \dots = \frac{A}{1-A}$ for $|A| < 1$.
-> 5. **Form the Closed-Form Expression**: Substitute $A = \alpha^{-1} z$ into the formula and simplify: $$X(z) = -\frac{\alpha^{-1} z}{1 - \alpha^{-1} z} = \mathbf{\frac{1}{1 - \alpha z^{-1}}}$$
+> 5. **Form the Closed-Form Expression**: Substitute $A = \alpha^{-1} z$ into the formula and simplify: $$X(z) = -\frac{\alpha^{-1} z}{1 - \alpha^{-1} z} = {\frac{1}{1 - \alpha z^{-1}}}$$
 > 6. **Determine the Region of Convergence (ROC)**: The series converges only if $|\alpha^{-1} z| < 1$. Solving for $z$ yields the interior of a circle: **$|z| < |\alpha|$**
 
 **Note:** Examples 1.3 and 1.4 highlight that a closed-form expression does not uniquely specify a signal; both the expression and the **ROC** are required for uniqueness.
@@ -74,9 +74,7 @@
 > 
 > 1. **Use the Z-Transform Definition**: Apply the standard power series formula: $X(z) = \sum_{n=-\infty}^{\infty} x(n)z^{-n}$.
 > 2. **Substitute the Signal Components**: Split the summation into two parts corresponding to the causal and anticausal terms: $$X(z) = \sum_{n=0}^{\infty} \alpha^n z^{-n} + \sum_{n=-\infty}^{-1} b^n z^{-n}$$
-> 3. **Rewrite as Geometric Series**:
->     - **Part 1**: $\sum_{n=0}^{\infty} (\alpha z^{-1})^n$.
->     - **Part 2**: Let $l = -n$. The sum becomes $\sum_{l=1}^{\infty} (b^{-1} z)^l$.
+> 3. **Rewrite as Geometric Series**: $$X(z) = \sum_{n=0}^{\infty} (\alpha z^{-1})^n + \sum_{l=1}^{\infty} (b^{-1} z)^l$$
 > 4. **Determine Convergence Conditions**:
 >     - The first series converges if $|\alpha z^{-1}| < 1 \implies$ **$|z| > |\alpha|$**.
 >     - The second series converges if $|b^{-1} z| < 1 \implies$ **$|z| < |b|$**.
@@ -114,13 +112,19 @@
 > 
 > *Solution*
 > 
-> 1. **Define Signal Components**: Let $x_1(n) = 2^n u(n)$ and $x_2(n) = 3^n u(n)$.
-> 2. **Apply Linearity**: The signal is a linear combination: $x(n) = 3x_1(n) - 4x_2(n)$. The property states: $X(z) = 3X_1(z) - 4X_2(z)$.
+> 1. **Define Signal Components**: Let
+> 	- $x_1(n) = 2^n u(n)$
+> 	- $x_2(n) = 3^n u(n)$
+> 2. **Apply Linearity**: The signal is a linear combination: $$x(n) = 3x_1(n) - 4x_2(n)$$ The property states: $$X(z) = 3X_1(z) - 4X_2(z)$$
 > 3. **Find Individual Transforms and ROCs**:
->     - **For $x_1(n)$**: Using the pair $\alpha^n u(n) \leftrightarrow \frac{1}{1-\alpha z^{-1}}$, we get $X_1(z) = \frac{1}{1-2z^{-1}}$ with **ROC: $|z| > 2$**.
->     - **For $x_2(n)$**: Similarly, $X_2(z) = \frac{1}{1-3z^{-1}}$ with **ROC: $|z| > 3$**.
-> 4. **Form the Combined Expression**: Substitute these into the linear equation: **$$X(z) = \frac{3}{1-2z^{-1}} - \frac{4}{1-3z^{-1}}$$**
-> 5. **Determine Overall ROC**: The overall ROC is the **intersection** of the individual ROCs ($|z| > 2$ and $|z| > 3$). **ROC: $|z| > 3$**
+>     
+>     Recall the pair: $$\alpha^n u(n) \leftrightarrow \frac{1}{1-\alpha z^{-1}}$$
+>     
+>     For $x_1(n)$ we get: $$x_1(n) = 2^n u(n) \leftrightarrow  X_1(z) = \frac{1}{1-2z^{-1}}$$ with **ROC: $|z| > 2$**.
+>     
+>     For $x_2(n)$ we get: $$x_2(n) = 3^n u(n) \leftrightarrow X_2(z) = \frac{1}{1-3z^{-1}}$$ with **ROC: $|z| > 3$**.
+> 1. **Form the Combined Expression**: Substitute these into the linear equation: **$$X(z) = \frac{3}{1-2z^{-1}} - \frac{4}{1-3z^{-1}}$$**
+> 2. **Determine Overall ROC**: The overall ROC is the **intersection** of the individual ROCs ($|z| > 2$ and $|z| > 3$). **ROC: $|z| > 3$**
 
 > ***Proof of the time shifting property***
 > 
@@ -322,7 +326,7 @@ plt.ylim(-1, 1.5)
 plt.show()
 ```
 
-![](443cf413-07a6-4db9-a47c-94fa47486bf5.png)
+![](ecg-segment-plot.png)
 
 The signal was recorded at **fs = 360 Hz**, so `time = np.arange(ecg.size) / fs` converts sample indices to seconds.
 
@@ -382,6 +386,8 @@ plt.ylim(-1.5, 1.5)
 plt.show()
 ```
 
+![](audio-waveform.png)
+
 Plots the amplitude of the audio signal over time, zoomed into a 100ms window (0.5–0.6s).
 
 ### Complex Numbers
@@ -389,7 +395,7 @@ Plots the amplitude of the audio signal over time, zoomed into a 100ms window (0
 #### Complex Square Root
 
 ```python
-cmath.sqrt(-1)  # → 1j
+cmath.sqrt(-1)  # 1j
 ```
 
 #### Defining & Inspecting a Complex Number
@@ -398,8 +404,8 @@ cmath.sqrt(-1)  # → 1j
 z = 2 + 3j
 np.real(z)   # 2.0
 np.imag(z)   # 3.0
-np.abs(z)    # magnitude
-np.angle(z)  # phase angle in radians
+np.abs(z)    # magnitude: 3.6055512754639896
+np.angle(z)  # phase angle (rad): 0.982793723247329
 ```
 
 #### Visualizations
@@ -420,6 +426,8 @@ plt.ylabel('imag axis')
 plt.show()
 ```
 
+![](complex-cartesian-plot.png)
+
 - **Polar plot** — uses `plt.polar()` to draw a vector from the origin with its magnitude and angle
 
 ```python
@@ -430,11 +438,17 @@ plt.polar([0, ang], [0, mag], 'r')
 plt.show()
 ```
 
+![](complex-polar-plot.png)
+
 #### Polynomial Roots
 
 ```python
 p = [1, 0, 0, 1]
 np.roots(p)
+```
+
+```
+array([-1. +0.j       ,  0.5+0.8660254j,  0.5-0.8660254j])
 ```
 
 Finds solutions to $x^3 + 1 = 0$.
