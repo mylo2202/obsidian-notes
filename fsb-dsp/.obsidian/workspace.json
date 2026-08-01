@@ -99,6 +99,27 @@
             }
           }
         ]
+      },
+      {
+        "id": "3d5a0609644de1e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ae2e70dd5bdd05d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "session5/note.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -118,8 +139,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
-                "collapseAll": false,
+                "file": "session5/note.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -128,7 +149,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Welcome"
+              "title": "Backlinks"
             }
           },
           {
@@ -137,12 +158,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "session5/note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links"
             }
           },
           {
@@ -173,23 +194,9 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
-          },
-          {
-            "id": "5ae2e70dd5bdd05d",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Welcome.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Welcome"
-            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -207,8 +214,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "7f56c7f80ae7b4c1",
+  "active": "b210dd96fae2db0c",
   "lastOpenFiles": [
+    "session5/note.pdf",
+    "session5/note.tex",
+    "session5/pole-zero-plot.png",
+    "session5/3-point-moving-average.png",
+    "session5/note.md",
     "session5/z-transform-graph.png",
     "session4/note.md",
     "session4/session4-ver2.pdf",
@@ -219,7 +231,6 @@
     "session4/ecg-segment-plot.png",
     "session4/complex-cartesian-plot.png",
     "session4/audio-waveform.png",
-    "session5/note.md",
     "Pasted image 20260731224913.png",
     "session3/note.md",
     "session5",
@@ -228,7 +239,6 @@
     "session3/note.tex",
     "session4",
     "session3/session3-TeX-Gyre-Pagella.pdf",
-    "session3/session3.pdf",
     "session3.md",
     "note.md",
     "session2/signal_visualization.png",

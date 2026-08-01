@@ -77,7 +77,7 @@ This equation, called the **Fourier Series**, shows how a periodic signal $x(t)$
 
 $$c_k = \frac{1}{T_p} \int_{T_p} x(t) e^{-j2\pi k F_0 t} dt$$
 
-This equation is used to determine the **Fourier coefficients** $c_k$ from a given periodic signal $x(t)$. The integration is performed over any single period of length $T_p$. Physically, each $c_k$ represents the amplitude and phase associated with the $k$-th harmonic component of the signal.
+This equation is used to determine the **Fourier coefficients** $c_k$ from a given periodic signal $x(t)$. The integration is performed over any single period of length $T_p$. Physically, each $c_k$ represents the amplitude and phase associated with the $k$-th harmonic component of the signal. $c_k$ is also used as features in Machine Learning models.
 
 **Key Spectral Representations**
 
@@ -115,7 +115,7 @@ For the Fourier series to exactly equal $x(t)$ at every value of $t$, the signal
 > 
 > 4. **Determine $c_k$ for $k \neq 0$:** Substitute the signal definition into the analysis equation: $$c_k = \frac{1}{T_p} \int_{-\tau/2}^{\tau/2} Ae^{-j2\pi kF_0t} dt$$ $$c_k = \frac{A}{T_p} \left[ \frac{e^{-j2\pi kF_0t}}{-j2\pi kF_0} \right]_{-\tau/2}^{\tau/2}$$ $$c_k = \frac{A}{-j2\pi kF_0T_p} (e^{-j\pi kF_0\tau} - e^{j\pi kF_0\tau})$$
 > 
-> 5. **Simplify Using Euler's Identity:** Rearrange the terms to form the sine function, noting that $F_0T_p = 1$: $$c_k = \frac{A}{\pi k} \left( \frac{e^{j\pi kF_0\tau} - e^{-j\pi kF_0\tau}}{j2} \right)$$ $$c_k = \frac{A\tau}{T_p} \frac{\sin(\pi kF_0\tau)}{\pi kF_0\tau}, \quad k = \pm 1, \pm 2, \dots$$ The coefficients are real-valued, following a $(\sin \phi)/\phi$ envelope with zero crossings at $kF_0 = m/\tau$.
+> 5. **Simplify Using Euler's Identity:** Rearrange the terms to form the sine function, noting that $F_0T_p = 1$: $$c_k = \frac{A}{\pi k} \left( \frac{e^{j\pi kF_0\tau} - e^{-j\pi kF_0\tau}}{j2} \right)$$ $$c_k = \frac{A\tau}{T_p} \frac{\sin(\pi kF_0\tau)}{\pi kF_0\tau}, \quad k = \pm 1, \pm 2, \dots$$ The coefficients are real-valued and takes the form of the sinc function $\text{sinc}(\phi) = \frac{\sin (\phi)}{\phi}$ with zero crossings at $kF_0 = m/\tau$.
 > 
 > 6. **Determine the Power Density Spectrum** The power density spectrum $|c_k|^2$ represents the power distribution across discrete frequencies $kF_0$: $$|c_k|^2 = \begin{cases} \left( \frac{A\tau}{T_p} \right)^2, & k = 0 \\ \left( \frac{A\tau}{T_p} \right)^2 \left( \frac{\sin(\pi kF_0\tau)}{\pi kF_0\tau} \right)^2, & k = \pm 1, \pm 2, \dots \end{cases}$$
 
@@ -303,27 +303,189 @@ To see this relationship, we represent the complex variable $z$ in polar form as
 
 ## Exercises
 
-> ***Example: 3-point Moving Average (FIR)***
-> 
-> Determine $h[n]$ of this system:
-> 
-> $$
-> y[n] = \frac{1}{3}(x[n] + x[n-1] + x[n-2])
-> $$
+### 3-point Moving Average (FIR)
 
-> ***Example: Causal First-Order IIR***
-> 
-> Determine $h[n]$ of this system:
-> 
-> $$
-> y[n] = ay[n-1] + bx[n],
-> \quad \text{initial rest } (y[n] = 0 \text{ for } n < 0)
-> $$
+Determine $h[n]$ of this system:
 
-> ***Example: Pole-Zero Plot***
-> 
-> Sketch the pole-zero plot of this system:
-> 
-> $$
-> H(z) = \frac{1 - 0.5 z^-1}{1 - 0.7 z^-1 - z^-2}
-> $$
+$$
+y[n] = \frac{1}{3}(x[n] + x[n-1] + x[n-2])
+$$
+
+We can use the two methods:
+
+1. **Using the Unit Sample (Impulse) Signal Definition**
+
+	By definition, the impulse response $h[n]$ is the system's output $y[n]$ when the input is the unit sample function $\delta[n]$:
+	
+	$$x[n] = \delta[n] = \begin{cases} 1, & n = 0 \\ 0, & n \neq 0 \end{cases}$$
+	
+	1. Substitute $x[n] = \delta[n]$ into the difference equation:
+	    
+	    $$h[n] = \frac{1}{3}\delta[n] + \frac{1}{3}\delta[n-1] + \frac{1}{3}\delta[n-2]$$
+	    
+	2. Evaluate $h[n]$ for individual values of $n$:
+	    
+	    - For $n = 0$: $h[0] = \frac{1}{3}\delta[0] + \frac{1}{3}\delta[-1] + \frac{1}{3}\delta[-2] = \frac{1}{3}(1) + 0 + 0 = \frac{1}{3}$
+	        
+	    - For $n = 1$: $h[1] = \frac{1}{3}\delta[1] + \frac{1}{3}\delta[0] + \frac{1}{3}\delta[-1] = 0 + \frac{1}{3}(1) + 0 = \frac{1}{3}$
+	        
+	    - For $n = 2$: $h[2] = \frac{1}{3}\delta[2] + \frac{1}{3}\delta[1] + \frac{1}{3}\delta[0] = 0 + 0 + \frac{1}{3}(1) = \frac{1}{3}$
+	        
+	    - For all other $n$: $h[n] = 0$
+
+	**Final Answer:**
+	
+	$$h[n] = \begin{cases} \frac{1}{3}, & n = 0, 1, 2 \\ 0, & \text{otherwise} \end{cases}$$
+	
+	Alternatively represented as:
+	
+	$$h[n] = \left\{ \underset{\uparrow}{\frac{1}{3}}, \frac{1}{3}, \frac{1}{3} \right\}$$
+
+2. **Using the z-Transform Definition**
+
+	The transfer function $H(z)$ is defined as the ratio of the z-transform of the output to the z-transform of the input:
+	
+	$$H(z) = \frac{Y(z)}{X(z)}$$
+	
+	The impulse response $h[n]$ is the inverse z-transform of $H(z)$:
+	
+	$$h[n] = \mathcal{Z}^{-1}\{H(z)\}$$
+	
+	1. **Take the z-transform of both sides of the difference equation:**
+	    
+	    Using the time-shifting property $\mathcal{Z}\{x[n-k]\} = z^{-k}X(z)$:
+	    
+	    $$Y(z) = \frac{1}{3}X(z) + \frac{1}{3}z^{-1}X(z) + \frac{1}{3}z^{-2}X(z)$$
+	    
+	2. **Factor out $X(z)$ to find $H(z)$:**
+	    
+	    $$Y(z) = X(z) \left( \frac{1}{3} + \frac{1}{3}z^{-1} + \frac{1}{3}z^{-2} \right)$$
+	    
+	    $$H(z) = \frac{Y(z)}{X(z)} = \frac{1}{3} + \frac{1}{3}z^{-1} + \frac{1}{3}z^{-2}$$
+	    
+	1. **Take the inverse z-transform ($\mathcal{Z}^{-1}$) term-by-term:**
+	    
+	    Using the standard z-transform pair $\mathcal{Z}^{-1}\{z^{-k}\} = \delta[n-k]$:
+	    
+	    $$h[n] = \mathcal{Z}^{-1}\left\{ \frac{1}{3} + \frac{1}{3}z^{-1} + \frac{1}{3}z^{-2} \right\}$$
+	    
+	    $$h[n] = \frac{1}{3}\delta[n] + \frac{1}{3}\delta[n-1] + \frac{1}{3}\delta[n-2]$$
+
+	**Final Answer:**
+	
+	$$h[n] = \begin{cases} \frac{1}{3}, & 0 \le n \le 2 \\ 0, & \text{otherwise} \end{cases}$$
+
+We can plot the Impulse Response and the Step Response of the system as follows:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import signal
+
+# Moving Average (length = 3)
+num = [1/3, 1/3, 1/3]  # numerator
+den = [1, 0, 0]        # denominator padded
+
+# Impulse response
+t, h = signal.dimpulse((num, den, 1))
+h = np.squeeze(h)
+
+# Step response
+t, s = signal.dstep((num, den, 1))
+s = np.squeeze(s)
+
+# Plot impulse and step response
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10,4))
+
+# Impulse response
+ax1.stem(t, h, linefmt='C0-', markerfmt='C0o', basefmt='C0-')
+ax1.set_title("Impulse Response")
+ax1.set_xlabel("n")
+ax1.set_ylabel("h[n]")
+ax1.grid(True)
+
+# Step response
+ax2.stem(t, s, linefmt='C1-', markerfmt='C1s', basefmt='C1-')
+ax2.set_title("Step Response")
+ax2.set_xlabel("n")
+ax2.set_ylabel("s[n]")
+ax2.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
+
+![](3-point-moving-average.png)
+
+### Causal First-Order IIR
+
+Determine $h[n]$ of this system:
+
+$$
+y[n] = ay[n-1] + bx[n],
+\quad \text{initial rest } (y[n] = 0 \text{ for } n < 0)
+$$
+
+1. **Take the z-transform of both sides of the difference equation:**
+    
+    Applying the time-shifting property $\mathcal{Z}\{y[n-1]\} = z^{-1} Y(z)$:
+    
+    $$Y(z) = a z^{-1} Y(z) + b X(z)$$
+    
+2. **Rearrange terms to form the system transfer function $H(z) = \frac{Y(z)}{X(z)}$:**
+    
+    $$Y(z) - a z^{-1} Y(z) = b X(z)$$
+    
+    $$Y(z) (1 - a z^{-1}) = b X(z)$$
+    
+    $$H(z) = \frac{Y(z)}{X(z)} = \frac{b}{1 - a z^{-1}}$$
+    
+3. **Take the inverse z-transform ($\mathcal{Z}^{-1}$) of $H(z)$:**
+    
+    Using the standard z-transform pair $\mathcal{Z}^{-1}\left\{\frac{1}{1 - a z^{-1}}\right\} = a^n u[n]$ for a causal system:
+    
+    $$h[n] = \mathcal{Z}^{-1}\{H(z)\} = b \cdot \mathcal{Z}^{-1}\left\{\frac{1}{1 - a z^{-1}}\right\} = b a^n u[n]$$
+    
+
+**Final Result**
+
+$$h[n] = b a^n u[n]$$
+
+### Pole-Zero Plot
+
+Sketch the pole-zero plot of this system:
+
+$$
+H(z) = \frac{1 - 0.5 z^-1}{1 - 0.7 z^-1 - z^-2}
+$$
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import signal
+
+# Example system: H(z) = (1 - 0.5 z^-1) / (1 - 0.7 z^-1 - z^-2)
+num = [1, -0.5]
+den = [1, -0.7, -1]
+
+# Get zeros, poles, gain
+z, p, _ = signal.tf2zpk(num, den) # transfer to pole-zero plot
+
+zeros_r, zeros_theta = np.abs(z), np.angle(z)
+poles_r, poles_theta = np.abs(p), np.angle(p)
+
+# Draw unit circle
+theta = np.linspace(0, 2*np.pi, 400)
+plt.polar(theta, np.ones_like(theta), 'k--', linewidth=1)
+plt.polar(zeros_theta, zeros_r, 'bo', label="Zeros")
+plt.polar(poles_theta, poles_r, 'rx', label="Poles")
+plt.title("Pole-Zero Plot in Z-Domain")
+plt.legend(loc="upper right")
+plt.show()
+```
+
+![](pole-zero-plot.png)
+
+**Remark**
+
+This system is not BIBO stable as there exists a pole that lies outside the unit circle.
