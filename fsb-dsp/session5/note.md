@@ -453,11 +453,62 @@ $$h[n] = b a^n u[n]$$
 
 ### Pole-Zero Plot
 
-Sketch the pole-zero plot of this system:
+Determine the pole-zero plot of this system:
 
 $$
-H(z) = \frac{1 - 0.5 z^-1}{1 - 0.7 z^-1 - z^-2}
+H(z) = \frac{1 - 0.5 z^{-1}}{1 - 0.7 z^{-1} - z^{-2}}
+= \frac{z^2 - 0.5 z}{z^2 - 0.7 z^1 - 1}
 $$
+
+We find the zeros (roots of the numerator) and the poles (roots of the denominator) in the complex $z$-plane.
+
+1. **Find the Zeros**
+
+	Set the numerator $N(z) = 0$:
+	
+	$$z^2 - 0.5z = 0 \implies z(z - 0.5) = 0$$
+	
+	- **Zero $z_1$:** $z_1 = 0$
+	    
+	- **Zero $z_2$:** $z_2 = 0.5$
+
+2. **Find the Poles**
+
+	Set the denominator $D(z) = 0$:
+	
+	$$z^2 - 0.7z - 1 = 0$$
+	
+	Using the quadratic formula $z = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ with $a = 1$, $b = -0.7$, $c = -1$:
+	
+	$$z = \frac{-(-0.7) \pm \sqrt{(-0.7)^2 - 4(1)(-1)}}{2(1)}$$
+	
+	$$z = \frac{0.7 \pm \sqrt{0.49 + 4}}{2} = \frac{0.7 \pm \sqrt{4.49}}{2}$$
+	
+	Since $\sqrt{4.49} \approx 2.11896$:
+	
+	- **Pole $p_1$:**
+	    
+	    $$p_1 = \frac{0.7 + 2.11896}{2} = \frac{2.81896}{2} \approx 1.4095$$
+	    
+	- **Pole $p_2$:**
+	    
+	    $$p_2 = \frac{0.7 - 2.11896}{2} = \frac{-1.41896}{2} \approx -0.7095$$
+
+3. **Final Results**
+
+	1. **Locations on the Real Axis:**
+	    
+	    - **Zeros:** Marked with `o` at $(0, 0)$ and $(0.5, 0)$.
+	        
+	    - **Poles:** Marked with `x` at $(-0.7095, 0)$ and $(1.4095, 0)$.
+	        
+	2. **System Stability:**
+	    
+	    - A causal LTI system is BIBO stable if and only if all poles lie **strictly inside the unit circle** ($\vert{}p\vert{} < 1$).
+	        
+	    - Here, $\vert{}p_1\vert{} = 1.4095 > 1$, which is outside the unit circle $\vert{}z\vert{} = 1$.
+	        
+	    - **Conclusion:** The causal system is **unstable**.
 
 ```python
 import numpy as np
@@ -485,7 +536,3 @@ plt.show()
 ```
 
 ![](pole-zero-plot.png)
-
-**Remark**
-
-This system is not BIBO stable as there exists a pole that lies outside the unit circle.
