@@ -8,17 +8,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3107e1a64cf380f5",
+            "id": "048be3cb9670f54a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Assessment/Case study Smart Healthcare Institute (SHI).md",
+                "file": "Sprint 1/Story 4 UML.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Case study Smart Healthcare Institute (SHI)"
+              "title": "Story 4 UML"
+            }
+          },
+          {
+            "id": "43f0a15a5987a9af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sprint 1/Story 4 UML.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Story 4 UML"
+            }
+          },
+          {
+            "id": "ce52643ffeecf660",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sprint 1/Story 1 UML.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Story 1 UML"
             }
           }
         ]
@@ -41,7 +69,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -94,17 +124,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "Sprint 1/Story 4 UML.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Welcome"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +143,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "Sprint 1/Story 4 UML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links"
             }
           },
           {
@@ -165,12 +195,12 @@
               "title": "Outline of Welcome"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,15 +213,30 @@
       "bases:Create new base": false
     }
   },
-  "active": "3107e1a64cf380f5",
+  "active": "048be3cb9670f54a",
   "lastOpenFiles": [
+    "Sprint 1/Story 3 UML.md",
+    "Sprint 1/Story 2 UML.md",
+    "Sprint 1/Story 1 UML.md",
+    "Sprint 1/Sprint 1 User Stories.md",
+    "Personas/Ms. Huong the Middle-Aged Patient.md",
+    "Personas/Mr. Tam the Elderly Patient.md",
+    "Personas/Mai the Busy Office Worker.md",
+    "Personas/Lan the Hospital Operations Manager.md",
+    "Personas/Dr. Hung the Specialist Physician.md",
     "Assessment/Group project.md",
     "Assessment/Case study Smart Healthcare Institute (SHI).md",
+    "Sprint 1/Story 4 UML.md",
+    "Personas.md",
+    "[Mai the Busy Office Worker.md",
+    "Study activities/Agile Sprint 1 (Unmarked).md",
+    "Personas",
+    "Tasks/Sprint 1",
+    "Sprint 1",
+    "Study activities/Group formation.md",
     "Study activities/Agile Sprint 3 (Unmarked).md",
     "Study activities/Agile Sprint 2 (Unmarked).md",
-    "Study activities/Agile Sprint 1 (Unmarked).md",
     "Study activities/Agile Sprint 0 initiation & planning (Unmarked).md",
-    "Study activities/Group formation.md",
     "Study activities",
     "Assessment",
     "Agile Project.md",
