@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a759027a30d8892c",
+            "id": "b210dd96fae2db0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,16 +20,16 @@
               "icon": "lucide-file",
               "title": "note"
             },
-            "group": "1d8258a787ecca29"
+            "group": "73cc358fd29104c9"
           }
         ]
       },
       {
-        "id": "9e4537f51e18c26f",
+        "id": "bc11dd289b95d977",
         "type": "tabs",
         "children": [
           {
-            "id": "f3200427ee4bf6a4",
+            "id": "1d77344b4bf67943",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -41,7 +41,7 @@
               "icon": "lucide-file",
               "title": "note"
             },
-            "group": "1d8258a787ecca29"
+            "group": "73cc358fd29104c9"
           }
         ]
       }
@@ -101,7 +101,7 @@
         ]
       },
       {
-        "id": "5843c2a612b04d75",
+        "id": "3d5a0609644de1e7",
         "type": "tabs",
         "children": [
           {
@@ -139,8 +139,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "session6/note.md",
-                "collapseAll": false,
+                "file": "session5/note.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -158,12 +158,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "session5/note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links"
             }
           },
           {
@@ -214,14 +214,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "a759027a30d8892c",
+  "active": "b210dd96fae2db0c",
   "lastOpenFiles": [
+    "session6/note.pdf",
+    "session6/note.tex",
+    "session6/magnitude-spectrum.png",
+    "session6/time-domain.png",
     "session5/note.md",
     "session6/note.md",
     "session6",
-    "session5/pole-zero-plot.png",
-    "session5/note.tex",
     "session5/note.pdf",
+    "session5/note.tex",
+    "session5/pole-zero-plot.png",
     "session5/3-point-moving-average.png",
     "session5/z-transform-graph.png",
     "session4/note.md",
@@ -238,14 +242,11 @@
     "session5",
     "session2/note.md",
     "session3/note.pdf",
-    "session3/note.tex",
     "session3.md",
     "note.md",
-    "session2/signal_visualization.png",
     "session1/note.md",
     "session2.md",
     "session1.md",
-    "signal_visualization.png",
     "Welcome.md"
   ]
 }
