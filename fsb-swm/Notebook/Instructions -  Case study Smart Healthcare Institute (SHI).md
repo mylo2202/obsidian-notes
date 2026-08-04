@@ -1,4 +1,4 @@
-# Case study: Smart Healthcare Institute (SHI)
+# Instructions - Case study: Smart Healthcare Institute (SHI)
 
 **Smart Healthcare Institute (SHI)** aims to revolutionise the healthcare services by integrating cutting-edge AI-centric technologies to enhance patient experience, streamline operations, and increase personalised healthcare growth.  
   

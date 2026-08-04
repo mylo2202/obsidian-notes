@@ -1,4 +1,4 @@
-# Story 3 UML
+# Sprint 1 Story 3 Diagrams
 
 ## User Story
 

@@ -8,45 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "048be3cb9670f54a",
+            "id": "26167d519478d287",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sprint 1/Story 4 UML.md",
+                "file": "Sprint 1 Diagrams/Sprint 1 Story 1 Diagrams.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Story 4 UML"
-            }
-          },
-          {
-            "id": "43f0a15a5987a9af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sprint 1/Story 4 UML.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Story 4 UML"
-            }
-          },
-          {
-            "id": "ce52643ffeecf660",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sprint 1/Story 1 UML.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Story 1 UML"
+              "title": "Sprint 1 Story 1 Diagrams"
             }
           }
         ]
@@ -143,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sprint 1/Story 4 UML.md",
+                "file": "Sprint 1 Diagrams/Sprint 1 Story 1 Diagrams.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -200,7 +172,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,32 +186,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "048be3cb9670f54a",
+  "active": "26167d519478d287",
   "lastOpenFiles": [
-    "Sprint 1/Story 3 UML.md",
-    "Sprint 1/Story 2 UML.md",
-    "Sprint 1/Story 1 UML.md",
-    "Sprint 1/Sprint 1 User Stories.md",
     "Personas/Ms. Huong the Middle-Aged Patient.md",
     "Personas/Mr. Tam the Elderly Patient.md",
     "Personas/Mai the Busy Office Worker.md",
     "Personas/Lan the Hospital Operations Manager.md",
     "Personas/Dr. Hung the Specialist Physician.md",
-    "Assessment/Group project.md",
-    "Assessment/Case study Smart Healthcare Institute (SHI).md",
-    "Sprint 1/Story 4 UML.md",
-    "Personas.md",
-    "[Mai the Busy Office Worker.md",
-    "Study activities/Agile Sprint 1 (Unmarked).md",
-    "Personas",
-    "Tasks/Sprint 1",
-    "Sprint 1",
-    "Study activities/Group formation.md",
+    "Notebook/User Stories.md",
+    "Notebook/Personas.md",
+    "Notebook/Instructions - Group project.md",
+    "Notebook/Instructions - Agile Sprints.md",
+    "Notebook/Instructions -  Case study Smart Healthcare Institute (SHI).md",
+    "Sprint 1 Diagrams/Sprint 1 Story 1 Diagrams.md",
+    "Sprint 1/Sprint 1 User Stories.md",
     "Study activities/Agile Sprint 3 (Unmarked).md",
     "Study activities/Agile Sprint 2 (Unmarked).md",
+    "Study activities/Agile Sprint 1 (Unmarked).md",
     "Study activities/Agile Sprint 0 initiation & planning (Unmarked).md",
+    "Sprint 1 Diagrams/Sprint 1 Story 2 Diagrams.md",
+    "Sprint 1 Diagrams/Sprint 1 Story 3 Diagrams.md",
+    "Sprint 1 Diagrams/Sprint 1 Story 4 Diagrams.md",
+    "Study activities/Group formation.md",
+    "[Mai the Busy Office Worker.md",
+    "Personas",
+    "Tasks/Sprint 1",
+    "Sprint 1 Diagrams",
     "Study activities",
-    "Assessment",
+    "Notebook",
     "Agile Project.md",
     "Coursera/Course 1 Graded Assignment.md",
     "Jira",

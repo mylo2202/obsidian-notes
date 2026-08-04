@@ -1,4 +1,4 @@
-# Group project
+# Instructions - Group project
 
 Your final assessment is the group project (read the Case study) that you were asked to do from the beginning of the course.
 
@@ -8,6 +8,14 @@ Your final assessment is the group project (read the Case study) that you were a
     (1) Jira project link and  
     (2) Confluence workspace link (connected to your Jira project).  
     - you need to add the lecturer (**[le.m.duc@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=le.m.duc%40gmail.com&authuser=0)**) as **administrative member** of **both your Jira project and the associated Confluence workspace**
+
+## Group formation
+
+Group formation:  
+
+- Form into **groups** of maximum of 4 students
+- Choose a group number and fill in your group members in the attached GSheet
+- In every class, sit with your groups to do the group-based study activities
 
 ## Rubric
 
